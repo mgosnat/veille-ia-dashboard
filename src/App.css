@@ -1,0 +1,64 @@
+.app { max-width: 1400px; margin: 0 auto; padding: 32px 24px; }
+
+.app-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+.app-header h1 { font-size: 24px; font-weight: 600; color: #111827; margin-bottom: 4px; }
+.date { font-size: 13px; color: #6b7280; }
+.header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.pipeline-badge { font-size: 12px; color: #6b7280; background: #f3f4f6; padding: 4px 10px; border-radius: 6px; }
+.loading-txt { font-size: 12px; color: #9ca3af; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-bottom: 32px; }
+
+.panel { display: flex; flex-direction: column; gap: 14px; }
+.panel-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.theme-badge { padding: 4px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; }
+.btn-analyze { font-size: 13px; padding: 6px 14px; }
+
+.card { background: #fff; border: 0.5px solid #e5e7eb; border-radius: 12px; padding: 14px; }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.label { font-size: 11px; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.06em; }
+.add-row { display: flex; gap: 6px; margin-bottom: 10px; }
+.add-row input { flex: 1; }
+.source-list { display: flex; flex-direction: column; gap: 3px; }
+.source-item { display: flex; justify-content: space-between; align-items: center; }
+.source-item span { font-size: 13px; color: #374151; }
+.btn-remove { font-size: 11px; background: none; border: none; color: #9ca3af; padding: 2px 6px; }
+.btn-remove:hover { background: none; color: #ef4444; }
+
+.kw-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.kw-tag { display: flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 500; }
+.kw-remove { cursor: pointer; font-size: 10px; opacity: 0.6; }
+.kw-remove:hover { opacity: 1; }
+
+.error-box { background: #fef2f2; color: #b91c1c; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+
+.insights { display: flex; flex-direction: column; gap: 10px; }
+.insights-header { display: flex; align-items: center; gap: 8px; }
+.auto-badge { font-size: 11px; color: #9ca3af; }
+
+.insight-card { background: #fff; border: 0.5px solid #e5e7eb; border-radius: 12px; padding: 14px; }
+.insight-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.insight-title { font-size: 14px; font-weight: 600; line-height: 1.4; color: #111827; flex: 1; }
+.insight-title a { text-decoration: none; color: #111827; }
+.insight-title a:hover { text-decoration: underline; }
+.pertinence { font-size: 11px; padding: 2px 8px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; font-weight: 500; }
+.insight-resume { font-size: 13px; color: #4b5563; line-height: 1.65; margin-bottom: 10px; }
+.insight-footer { display: flex; justify-content: space-between; align-items: center; }
+.insight-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.insight-source { font-size: 12px; color: #9ca3af; }
+.insight-cat { font-size: 11px; background: #f3f4f6; color: #6b7280; padding: 1px 7px; border-radius: 5px; }
+
+.saved-section { background: #f9fafb; border: 0.5px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+.saved-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 14px; font-weight: 600; color: #111827; }
+.saved-item { background: #fff; border: 0.5px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-top: 10px; }
+.saved-item-body { flex: 1; }
+.saved-item-meta { display: flex; gap: 6px; align-items: center; margin-bottom: 4px; flex-wrap: wrap; }
+.theme-badge-sm { font-size: 11px; padding: 1px 8px; border-radius: 100px; font-weight: 500; }
+.saved-date { font-size: 11px; color: #9ca3af; }
+.saved-title { font-size: 13px; font-weight: 600; color: #111827; margin-bottom: 2px; }
+.saved-source { font-size: 12px; color: #6b7280; }
+
+@media (max-width: 768px) {
+  .app { padding: 20px 16px; }
+  .grid { grid-template-columns: 1fr; }
+}
