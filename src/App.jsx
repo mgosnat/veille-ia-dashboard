@@ -154,7 +154,7 @@ export default function App() {
       });
       const data = await r.json();
       const txt = (data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("").replace(/```json|```/g,"");
-      const m = txt.match(/\[[\s\S]*?\]/);
+      const m = txt.match(/\[[\s\S]*\]/);
       if(!m) throw new Error("Pas de résultat structuré");
       setInsights(i=>({...i,[tid]:JSON.parse(m[0])}));
     } catch(e){ setErrors(err=>({...err,[tid]:e.message})); }
