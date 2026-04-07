@@ -147,7 +147,7 @@ export default function App() {
         method:"POST", headers:{"Content-Type":"application/json"},
         body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:2000,
           tools:[{type:"web_search_20250305",name:"web_search"}],
-          messages:[{role:"user",content:`Veille sur "${THEME_CONFIG[tid].label}". Mots-clés: ${keywords[tid].join(", ")}. Dernières 24-48h. Retourne UNIQUEMENT JSON: [{titre,resume,source,url,pertinence,categorie}] 8 items, resume en français. JSON brut.`}]})
+          messages:[{role:"user",content:`Veille PRATIQUE sur "${THEME_CONFIG[tid].label}". Focus sur: nouveaux outils concrets, releases, retours d'experience builders, cas d'usage reels, tutoriels, produits agentiques. Mots-clés: ${keywords[tid].join(", ")}. Dernières 24-48h. Evite les articles theoriques et academiques. Retourne UNIQUEMENT JSON:
       });
       const data = await r.json();
       const txt = (data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("").replace(/```json|```/g,"");
