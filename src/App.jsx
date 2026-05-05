@@ -148,7 +148,7 @@ export default function App() {
       const prompt = prefix + ' "' + THEME_CONFIG[tid].label + '".' + focus + ' Mots-cles: ' + keywords[tid].join(", ") + '. Dernieres 24-48h. Retourne UNIQUEMENT JSON: [{titre,resume,source,url,pertinence,categorie}] 8 items, resume en francais. JSON brut.';
       const r = await fetch("/api/claude",{
         method:"POST", headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:2000,
+        body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:4000,
           tools:[{type:"web_search_20250305",name:"web_search"}],
           messages:[{role:"user",content:prompt}]})
       });
