@@ -1,6 +1,6 @@
-import https from 'https'
+const https = require('https')
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
@@ -10,7 +10,9 @@ export default async function handler(req, res) {
   if (!apiKey) return res.status(500).json({ error: 'ANTHROPIC_KEY missing' })
 
   let body = req.body
-  if (typeof body === 'string') { try { body = JSON.parse(body) } catch { return res.status(400).json({ error: 'Bad JSON' }) } }
+  if (typeof body === 'string') {
+    try { body = JSON.parse(body) } catch { return res.status(400).json({ error: 'Bad JSON' }) }
+  }
 
   const payload = JSON.stringify(body)
 
