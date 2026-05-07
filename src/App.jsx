@@ -147,7 +147,7 @@ export default function App() {
      const focus = tid === "agentique" 
   ? " IMPORTANT : cherche UNIQUEMENT des contenus publiés dans les 48 dernières heures sur : (1) un nouvel outil ou app IA agentique avec lien pour le tester, (2) un retour d'expérience concret d'une personne ou équipe qui a automatisé une tâche réelle (email, calendrier, facturation, support client, recherche, rédaction), (3) un workflow n8n/Make/Zapier/LangGraph publié avec résultats mesurables, (4) une démo ou vidéo d'un agent en action sur un cas métier. EXCLURE ABSOLUMENT : comparatifs de frameworks, benchmarks techniques, articles sur l'EU AI Act ou la régulation, définitions de ce qu'est un agent, opinions générales." 
   : "";
-      const prompt = prefix + ' "' + THEME_CONFIG[tid].label + '".' + focus + ' Mots-cles: ' + keywords[tid].join(", ") + '. Dernieres 24-48h. Retourne UNIQUEMENT JSON: [{titre,resume,source,url,pertinence,categorie}] 8 items, resume en francais. JSON brut.';
+      const prompt = prefix + ' "' + THEME_CONFIG[tid].label + '".' + focus + ' Mots-cles: ' + keywords[tid].join(", ") + '. Publies UNIQUEMENT dans les 48 dernieres heures (nous sommes le 07/05/2026). Retourne UNIQUEMENT JSON: [{titre,resume,source,url,pertinence,categorie}] 8 items, resume en francais. JSON brut.';
       const r = await fetch("/api/claude",{
         method:"POST", headers:{"Content-Type":"application/json"},
         body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:4000,
